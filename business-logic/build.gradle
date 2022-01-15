@@ -1,0 +1,4 @@
+dependencies {
+    implementation project(':utilities')
+    testImplementation project(':test-share')
+}

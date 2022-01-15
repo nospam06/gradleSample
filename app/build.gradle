@@ -1,0 +1,6 @@
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter:$springboot_version"
+    implementation 'org.apache.commons:commons-text:1.9'
+    implementation project(':utilities')
+    testImplementation project(':test-share')
+}

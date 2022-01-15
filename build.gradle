@@ -1,0 +1,22 @@
+allprojects {
+    group = 'org.example'
+    version = "$project_version"
+}
+subprojects {
+    apply plugin: 'java-library'
+    tasks.withType(JavaCompile) {
+        options.encoding("UTF-8")
+    }
+    test {
+        useJUnitPlatform()
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compileOnly "org.projectlombok:lombok:1.18.18"
+        annotationProcessor "org.projectlombok:lombok:1.18.18"
+        testCompileOnly "org.projectlombok:lombok:1.18.18"
+        testAnnotationProcessor "org.projectlombok:lombok:1.18.18"
+    }
+}
